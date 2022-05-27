@@ -1,7 +1,8 @@
 # 开发指南
 
 ```{toctree}
-:maxdepth: 2
+:maxdepth: 1
+:hidden:
 :glob:
 
 How-To-Guides/Connect-Ctrl

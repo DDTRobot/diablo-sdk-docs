@@ -26,7 +26,7 @@
  - 树莓派中有两个默认串口，一个是软串口`ttyS0`，一个是硬件串口`ttyAMA0` 。在默认情况下 `Serial0` 是不开启的。而更加稳定的硬件串口`ttyAMA0` 则默认用于板载蓝牙的通信 `Serial1` 。您可以通过以下指令查看对应的串口映射信息。
  ```bash
 	ls -l /dev/serial*
-	#/dev/serial0 -> ttyS0
+	#/dev/serial1 -> ttyAMA0
  ```
 - 首先您需要先在配置文件中打开 `Serial0`。
   在 `/boot/firmware/config.txt` 与 `/boot/firmware/syscfg.txt`中修改串口使能配置信息。
@@ -63,11 +63,31 @@
 - 在默认情况下 `ttyAMA0` 的串口是需要 root 权限才可以调用的。所以我们需要将自己的用户添加到 `dialout` 的用户组中。
 
  ```bash
-	whoami 	#diablo  获得用户名
-	sudo usermod -aG dialout diablo 	#将当前用户添加到dialout用户组。
+  sudo apt install rpi.gpio-common
+  sudo adduser ${USER} dialout   #将输出的用户名替换${USER}
+  sudo reboot
  ```
 
 
+### 四、创建ROS工作空间
 
-## 通过我们的镜像开始构建
+```bash
+  mkdir -p catkin_ws/src    #创建一个工作空间的文件夹
+  cd catkin_ws/src          #进入Src目录
+  catkin_init_workspace     #初始化ROS工程
+  git clone https://github.com/Direcrt-Drive-Technology/diablo-sdk-v1.git
+  cd ..                     #回到catkin_ws目录
+  catkin_make               #编译项目
+  source devel/setup.bash
+```
+
+```{note}
+  在 cmake 的过程中若出现找不到 ``catkin_DIR`` 等问题可能是您没有安装好ROS，或是没有 ``source devel/setup.bash``。
+  可以尝试 ``source devel/setup.bash`` 后再次编译。若出现一切有关于依赖保安装的未知问题，可以使用 ``apt install`` 命令尝试进行安装。
+```
+
+### 五、只编译SDK部分
+
+我们的 `SDK` 支持您脱离 `Ros` 进行编译，这有助于您适配自己的代码，或是在自定义您自己 `API` 的过程中提供更好的编译体验。
+
 

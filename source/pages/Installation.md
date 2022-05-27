@@ -5,27 +5,23 @@
 :hidden:
 :glob:
 
-Installation/Installing-SDK-On-Ubuntu
-Installation/Installing-SDK-On-Pi
-Installation/Build-Dependencies
 Installation/Flash-image
-
+Installation/Build-Dependencies
+Installation/Installing-SDK-On-Pi
 ```
 
-本页讲述如何安装部署 ``DIABLO-SDK`` 在您的设备中，您可以选择在 ``PC`` 端进行部署进行远程连接操作您的机器人，也可以通过直接在我们的 ``机器人`` 中进行修改调试
-构建您自己的自定义功能。
 
- * [在Ubuntu上部署ROS Melodic](./Installation/Build-Dependencies)
- * [在Ubuntu上部署DIABLO-SDK](./Installation/Installing-SDK-On-Ubuntu)
+本页讲述如何安装部署 ``DIABLO-SDK`` 在您的设备中。您可以按照我们提供的链接，快速构建系统镜像。在安装的过程中建议您为树莓派准备一根 `miniHDMI 转 HDMI` 的视频线。
+
+ * [在树莓派上部署ROS  Noetic](./Installation/Build-Dependencies)
+ * [在树莓派上部署DIABLO-SDK](./Installation/Installing-SDK-On-Ubuntu)
+
+
 
    
 
 ```{note}
-``DIABLO-SDK`` 依托于 ``ROS Melodic`` 进行部署，您需要保证您的系统支持ROS的最低配置要求。
+``DIABLO-SDK`` 依托于 ``ROS Noetic`` 进行部署，您需要保证您的系统支持ROS的最低配置要求。或者您选择不编译ROS,但是您必须确保您的设备支持 ``wiringPi`` 。
 ```
-
-
-
-
 
 

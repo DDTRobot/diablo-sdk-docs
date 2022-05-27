@@ -2,13 +2,14 @@
 >
 
 ```{toctree}
-:maxdepth: 3
+:maxdepth: 1
 :caption: DIABLO-Onboard-SDK 开发文档
 pages/Installation
-pages/How-to-Guides
 pages/User-Example
 pages/Related-Projects
 ```
+
+
 
 ## 简介
 
@@ -25,11 +26,7 @@ DIABLO OSDK是DIABLO双足轮式机器人系统配套的程序包,运行在机�
 
 ### 如何开始
 
-我们提供了机器人的控制结构，帮助您快速与自己的应用进行结合。您可以通过以[Ros](./pages/Installation/Build-Dependencies.md)节点的方式进行通信交互，也可以不依赖Ros直接对[SDK](./pages/Installation/Installing-SDK-On-Ubuntu.md)进行编译，依托于串口通信直接发送控制指令。
-
-### 开发指南
-
-您可以在[这里](./pages/User-Example.md)找到一些API的详细解释说明。
+我们提供了机器人的控制结构，帮助您快速与自己的应用进行结合。您可以通过以[Ros](./pages/Installation/Build-Dependencies.md)节点的方式进行通信交互，也可以不依赖Ros直接对[SDK](./pages/Installation/Installing-SDK-On-Pi.md)进行编译。
 
 ### SDK开发案例
 

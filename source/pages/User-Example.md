@@ -7,6 +7,7 @@
 :glob:
 
 Examples/Virtual-Ctrler
+Examples/Moment-Ctrler
 ```
 
 在本页中您可以参照我们提供的示例，进行自定义的开发工作。
