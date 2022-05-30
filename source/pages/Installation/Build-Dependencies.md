@@ -41,7 +41,7 @@ curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo ap
 
 ```bash
 sudo apt update
-sudo apt install ros-noetic-desktop-full
+sudo apt install ros-noetic-ros-base
 echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc #将此命令写入.bashrc，每次启动终端会自动运行
 source ~/.bashrc
 ```
