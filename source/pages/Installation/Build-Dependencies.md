@@ -46,4 +46,14 @@ echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc #将此命令写入.bashrc
 source ~/.bashrc
 ```
 
+## 安装 wiringpi 串口库
+
+- `wiringPi` 是树莓派提供的控制 `IO` 的库。树莓派通过 `IO` 的串口与 `MUC` 相连，由于 `wiringPi` 的兼容性，您只能在支持此库的设备中使用 API 或者将串口库替换成支持您自己平台的库。
+
+```
+cd /tmp
+wget https://project-downloads.drogon.net/wiringpi-latest.deb
+sudo dpkg -i wiringpi-latest.deb
+```
+
 
