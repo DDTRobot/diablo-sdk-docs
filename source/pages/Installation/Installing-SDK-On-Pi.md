@@ -72,6 +72,7 @@
 ### 四、创建ROS工作空间
 
 ```bash
+  sudo apt install git tree openssh-server
   mkdir -p catkin_ws/src    #创建一个工作空间的文件夹
   cd catkin_ws/src          #进入Src目录
   catkin_init_workspace     #初始化ROS工程
