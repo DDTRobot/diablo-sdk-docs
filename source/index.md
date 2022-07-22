@@ -6,7 +6,6 @@
 :caption: DIABLO-Development-Doc 开发文档
 pages/Installation
 pages/Node-List
-pages/Related-Projects
 ```
 
 
