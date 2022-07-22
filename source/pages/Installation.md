@@ -1,27 +1,29 @@
 # 安装与部署
 
 ```{toctree}
-:maxdepth: 1
+:maxdepth: 2
 :hidden:
 :glob:
 
-Installation/Flash-image
-Installation/Build-Dependencies
-Installation/Installing-SDK-On-Pi
+Installation/installing-ros2-packages
+Installation/installing-ros-packages
+Installation/build-without-ros
+Installation/installing-sdk-on-pi
+Installation/flash-image
 ```
 
 
-本页讲述如何安装部署 ``DIABLO-SDK`` 在您的设备中。您可以按照我们提供的链接，快速构建系统镜像。在安装的过程中建议您为树莓派准备一根 `miniHDMI 转 HDMI` 的视频线。
+本页讲述如何在设备中安装部署 `Diablo SDK` 。
 
- * [在树莓派上部署ROS  Noetic](./Installation/Build-Dependencies)
- * [在树莓派上部署DIABLO-SDK](./Installation/Installing-SDK-On-Ubuntu)
+ * [安装与部署ROS2](./Installation/installing-ros2-packages)
+ * [安装与部署ROS](./Installation/installing-ros-packages)
+ * [通过源码编译 SDK](./Installation/build-without-ros)
+ * [树莓派配置IO串口](./Installation/installing-sdk-on-pi)
+ * [刷写镜像工具](./Installation/flash-image)
 
 
-
-   
-
-```{note}
-``DIABLO-SDK`` 依托于 ``ROS Noetic`` 进行部署，您需要保证您的系统支持ROS的最低配置要求。或者您选择不编译ROS,但是您必须确保您的设备支持 ``wiringPi`` 。
+```{tip}
+我们更加推荐您使用 `ROS2` 的版本。我们也会在后续提供更多 `ROS2` 的功能包，供您使用。
 ```
 
 

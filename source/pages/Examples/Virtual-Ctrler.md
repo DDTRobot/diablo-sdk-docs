@@ -1,4 +1,4 @@
-# 虚拟遥控器案例
+# 树莓派镜像刷机教程
 
 ```{toctree}
 :maxdepth: 1
@@ -6,11 +6,15 @@
 ```
 
 
-虚拟遥控器控制脚本存放于控制端`./script`文件夹下。
+```{contents} 目录
+:depth: 2
+:local:
+```
 
-## 快速开始
+## Win 安装 balenaEtcher 并启动
 
-您可以通过[在Ubuntu上部署DIABLO-SDK](../Installation/Installing-SDK-On-Ubuntu.md)中的教程部署SDK。部署完成后运行 ` roscore`，并启动控制节点。
+
+
 
 ```bash
 roscore &

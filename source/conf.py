@@ -7,11 +7,11 @@ from docutils.parsers.rst import Directive
 import os
 
 project = 'DIABLO-Onboard-SDK'
-copyright = '2022, VulcanYJX'
+copyright = '2022, 东莞市本末科技有限公司'
 author = 'VulcanYJX'
 
 # The full version, including alpha/beta/rc tags
-release = 'v1.1'
+release = 'v2.1'
 
 
 # -- General configuration ---------------------------------------------------

@@ -18,11 +18,12 @@
 
 ![select_img](../../_static/select_img.png)
 
-## 将 32G SD卡插入PC  (注：目前仅支持`32G`)
+## 将 SD卡插入PC 
 
 ![select_device](../../_static/select_device.png)
 
 - 选择 SD 卡。
 - 点击  Flash!  开始刷入镜像。
 - 等待完成即可。
+
 

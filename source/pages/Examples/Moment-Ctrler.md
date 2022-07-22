@@ -1,15 +1,20 @@
-# 机器人控制案例
+# 树莓派镜像刷机教程
 
 ```{toctree}
 :maxdepth: 1
 :glob:
 ```
 
-在此案例中，您将了解到如何通过 `MovementCtrl` 来对您的机器人进行精准的控制。
 
-## 环境依赖
+```{contents} 目录
+:depth: 2
+:local:
+```
 
-您可以通过[在Ubuntu上部署DIABLO-SDK](../Installation/Installing-SDK-On-Pi.md)中的教程部署SDK。部署完成后运行 ` roscore`，并启动控制节点。
+## Win 安装 balenaEtcher 并启动
+
+
+
 
 ```bash
 roscore &
