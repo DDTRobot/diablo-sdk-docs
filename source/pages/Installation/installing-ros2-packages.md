@@ -1,43 +1,37 @@
-# 安装与部署ROS2
+# Install and deploy ROS2
 
 ```{toctree}
 :maxdepth: 1
 :glob:
 ```
 
-
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
 
+## Install DIABLO_ROS2 on Sunrise X3 PI
 
-
-## X3 Pi 安装 DIABLO_ROS2
-
-- [安装旭日X3派系统镜像](https://developer.horizon.ai/resource)
-- [地平线机器人平台](https://developer.horizon.ai/api/v1/fileData/TogetherROS/index.html)
+- [Install the Sunrise X3 PI system image](https://developer.horizon.ai/resource)
+- [Horizon Robotics Platform](https://developer.horizon.ai/api/v1/fileData/TogetherROS/index.html)
 
 ```{tip}
-如果您安装了 foxy 的软件包，而编译的过程中识别不到。这可能是软连接的问题，可以尝试 ``source /opt/ros/foxy/setup.bash`` 解决问题。由于地平线的更新比较频繁，一切与硬件平台相关操作以地平线官方文档为主。
+If you have installed a foxy package, but the compilation process fails to recognize it. This may be caused by soft connnection, try `source /opt/ros/foxy/setup.bash`. All hardware platform-related activities are based on Horizon's "official documentation", which is updated regularly.
 ```
 
-
-## Raspberry Pi 安装 DIABLO_ROS2
+## Install DIABLO_ROS2 on Raspberry PI
 
 - [Ubuntu-mate](https://ubuntu-mate.org/download/arm64/jammy/)
-- [树莓派配置硬串口](./installing-sdk-on-pi)
-- [安装Ros-foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
+- [Raspberry PI serial IO port configuration](./installing-sdk-on-pi)
+- [Install ROS-foxy](https://docs.ros.org/en/foxy/Installation/Ubuntu-Install-Debians.html)
 
 ```{warning}
-Ros 的安装可能受到网络的影响，会导致安装出现问题。
+The ROS installation may be affected by the network, which may cause installation problems.
 ```
 
+## Compile ROS Package
 
-
-## 编译 Ros Package
-
-1. 创建ros工程文件夹
+1. Create ROS project folder
 
 ```bash
 #make sure you have build all dependence.
@@ -60,9 +54,8 @@ ros2 run diablo_ctrl diablo_ctrl_node
 ros2 run diablo_teleop teleop_node 
 ```
 
-向 `.bashrc` 添加以下指令，保证您可以通过局域网访问`ROS机器人` 的节点。
+Add the following commands to `.bashrc` to ensure that you can access `ROS Robots` node over the LAN.
 
 ```bash
 export ROS_DOMAIN_ID=5 
 ```
-

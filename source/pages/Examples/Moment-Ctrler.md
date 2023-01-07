@@ -1,79 +1,72 @@
-# 树莓派镜像刷机教程
+# Raspberry PI OS image flash tutorial
 
 ```{toctree}
 :maxdepth: 1
 :glob:
 ```
 
-
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
 
-## Win 安装 balenaEtcher 并启动
-
-
-
+## Install balenaEtcher and start it on Windows
 
 ```bash
 roscore &
 rosrun diablo_sdk movement_ctrl_example
 ```
 
-## 运行SDK演示案例
+## Run SDK demo
 
-在控制端，运行 `./script/teleop.py` 脚本。用于捕获键盘的输入，并通过 `Ros` 转发至其控制节点。
+Run `./script/teleop.py` script from the control side. Used for capturing the keyboard input and forward it to its control node via `Ros`.
 
-你也可以通过 ` ROS` 多机通信的方式，对机器人进行远程控制。
+You can also use ` ROS` multi-machine communication ability to control the robot remotely.
 
-### 操作说明
+### Operating instruction
 
- `w` : 控制机器人向前移动。`低速模式:` (-1.0~+1.0 m/s)  ； `高速模式:` (-1.6~+1.6 m/s)  
- 
- `s` : 控制机器人向后移动。`低速模式:` (-1.0~+1.0 m/s)  ； `高速模式:` (-1.6~+1.6 m/s)  
- 
- `a` : 控制机器人向左转向。`任意模式:` (-5.0~+5.0 rad/s)
- 
- `d` : 控制机器人向右转向。`任意模式:` (-5.0~+5.0 rad/s)
- 
- `q` : 控制机器人向左倾斜。`站立模式:` (-0.2~+0.2 rad/s)
- 
- `e` : 控制机器人向右倾斜。`站立模式:` (-0.2~+0.2 rad/s)
- 
- `r` : 调整机身倾角为水平。`站立模式` 
- 
- `v` : 切换机器人至站立形态。  
- 
- `z` : 切换机器人至匍匐形态。  
- 
- `n` : 机器人上升高度控制模式。 `位置模式0:` (0 ~ 1)
- 
- `m` : 机器人上升高度控制模式。 `速度模式1:` (-0.25 ~ +0.25 m/s) 
- 
- `f` : 站立形态，最低高度。 `位置模式` 
+`w`: Control the robot to move forward. `Low-speed mode::` (-1.0~+1.0 m/s); `High-speed mode::` (-1.6~+1.6 m/s)
 
- `g` : 站立形态，最中间度。 `位置模式` 
+`s`: Control the robot to move backward. `Low-speed mode::` (-1.0~+1.0 m/s); `High-speed mode::` (-1.6~+1.6 m/s)
 
- `h` : 站立形态，最高高度。 `位置模式` 
+`a`: Control the robot to turn left. `Arbitrarily mode::` (-5.0~+5.0 rad/s)
 
- `x` : 固定速度降低至最低。 `速度模式` 
+`d`: Control the robot to turn right. `Arbitrarily mode::` (-5.0~+5.0 rad/s)
 
- `c` : 固定速度升高至最高。 `速度模式` 
+`q`: Control the robot to tilt to the left. `Standing mode::` (-0.2~+0.2 rad/s)
 
- `y` : 机器人上升高度控制模式。 `位置模式0:` (-0.3 ~ +0.3 pi) 
- 
- `u` : 机器人上升高度控制模式。 `速度模式1:` (-1.8 ~ +1.8 rad/s) 
+`e`: Control the robot to tilt to the right. `Standing mode::` (-0.2~+0.2 rad/s)
 
- `1`: 退出虚拟遥控器控制。
+`r`: Adjust the tilt angle of the fuselage to horizontal. `Standing mode:`
+
+`v`: Switch the robot to the standing mode.
+
+`z`: Switch the robot to creeping mode.
+
+`n`: Control mode for raising the robot. `Position mode 0:` (0 ~ 1)
+
+`m`: Control mode for raising the robot. `Position mode 1:` (-0.25 ~ +0.25 m/s)
+
+`f`: Minimum height in standing mode. `Position mode`
+
+`g`: Middle height in standing mode. `Position mode`
+
+`h`: Maximum height in standing mode. `Position mode`
+
+`x`: Reduced the fixed speed to the minimum. `Speed mode`
+
+`c`: Increase the fixed speed to the maximum. `Speed mode`
+
+`y`: Control mode for raising the robot. `Position mode 0:` (-0.3 ~ +0.3 pi)
+
+`u`: Control mode for raising the robot. `Speed mode 1:` (-1.8 ~ +1.8 rad/s)
+
+`1`: Exit virtual remote control.
 
 ```{note}
-为安全起见，请不要在虚拟遥控器操控时切换遥控器模式，断开虚拟遥控器前请切换机器人为匍匐形态且遥控器设置机器人为匍匐形态。 物理遥控手柄的控制权限高于虚拟手柄的控制权限，调试时您可以使用物理手柄保护您的机器人。
+Please don't change the remote control mode while the virtual remote control is in use for your safety. Please switch the robot to creeping mode and configure the robot to creeping mode via the remote control before disconnecting the virtual remote control. You can utilize the physical remote control handle to protect your robot while debugging, since it has a greater level of control authority than the virtual handle.
 ```
 
 ```{warning}
-切换机器人为站立模式时，若负载过大会触发电机保护程序，将阻止机器人站起，若严重过载将触发电池保护程序，电池将断开供电。为安全起见，请勿超过最大负载切换机器人形态。
+When the robot is put in standing mode, an overload will activate the generator protection program, which will prohibit the robot from standing up and a severe overload will activate the battery protection program, which will cut off the power. When the maximum load is reached,please do not switch the robot mode for safety.
 ```
-
-
-

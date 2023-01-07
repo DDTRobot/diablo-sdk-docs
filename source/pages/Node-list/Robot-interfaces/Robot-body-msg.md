@@ -1,37 +1,35 @@
-# 机器人机载传感器接口
+# On-board sensor interface of the robot
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-此目录中定义了由 `MCU` 中上报的各种传感器的信息在 `ROS2` 中的发布接口。为了便于您使用 `ROS2` 中的一些可视化功能，请优先使用 `ROS2` 内置的消息格式。
+This directory defines the interface through which the information of the various sensors reported by the `MCU` is published in `ROS2`. Use `ROS2` built-in message format first, which makes it easier to use some of the visualization functions in `ROS2`.
 
-## 消息简介
+## Message Introduction
 
-- 机器人电机信息 x6
+- Robot motor information x6
+  
+  > - Message header
+  > - Number of windings of motor
+  > - Motor angle
+  > - Motor speed
+  > - Torque current
+  > - The vertical distance between the shaft center of the outer motor and the shaft center of the hub motor
 
-  > - 消息包头
-  > - 电机圈数
-  > - 电机转角
-  > - 电机转速
-  > - 转矩电流
-  > - 外侧电机轴心 与 轮毂电机轴心 的垂直距离
+- Movement control command
+  
+  > - Control instruction
+  > 
+  > - Control value
 
-
-- 运动控制指令
-
-  > - 控制指令
-  >
-  > - 控制数值
-
-- 机器人控制状态信息
-
-  > - 控制模式
-  >
-  > - 机器人运动状态码
-  >
-  > - 错误信息
-  >
-  > - 警告信息
-
+- Robot control status information
+  
+  > - Control mode
+  > 
+  > - Robot motion status code
+  > 
+  > - Error message
+  > 
+  > - Warning message

@@ -1,4 +1,4 @@
-# 机器人感知
+# Robot sensing
 
 ```{toctree}
 :maxdepth: 1
@@ -8,14 +8,10 @@
 Robot-ception/Robot-body-sensor
 ```
 
+You can find the implementation of robot sensors on this page.
 
-您在这本页找到与机器人相关的传感器部分的实现。
-
- * [机器人内置传感器](./Robot-ception/Robot-body-sensor)
-
+* [Built-in sensors of robot](./Robot-ception/Robot-body-sensor)
 
 ```{tip}
-您可以将自定义的与传感器相关的功能包存放在这个文件目录下。
+In this file directory, you can keep your customized sensor-related function packages.
 ```
-
-

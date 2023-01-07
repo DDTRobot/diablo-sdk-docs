@@ -1,4 +1,4 @@
-# 机器人基础控制
+# Robot basic control
 
 ```{toctree}
 :maxdepth: 1
@@ -9,17 +9,12 @@ Robot-interaction/Robot-ctrl
 Robot-interaction/Robot-teleop
 ```
 
+On this page you will find the control functions and built-in sensors sections related to the robot.
 
-您将在本页找到与机器人相关的控制部分以及机器人内置传感器数据读取部分。
+* [The robot obtains the SDK control permission](./Robot-interaction/Robot-ctrl)
 
- * [机器人获取SDK控制权限](./Robot-interaction/Robot-ctrl)
-
- * [机器人虚拟遥控器](./Robot-interaction/Robot-teleop)
-
-
+* [Virtual remote control of robot](./Robot-interaction/Robot-teleop)
 
 ```{tip}
-如果您想要调整控制的 ``API`` 或者构建自己的控制算法，可以在这个目录下进行。
+In file directory, you can make changes to the control's `API` or create your own control algorithm.
 ```
-
-

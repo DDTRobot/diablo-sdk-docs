@@ -1,20 +1,18 @@
-# 机器人电机角度转换
+# Robot motor angle conversion
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-由于我们的腿部有一个平行四边形的结构，而 `xacro` 中并不能描述一个并联的结构。所以我们通过角度的计算，来补偿腿部四边形的转动效果。
+Robot's legs form a parallelogram structure, but a parallel structure cannot be expressed in `xacro`. Therefore, we use angle calculations to compensate for the rotation of parallelogram structure formed by the legs.
 
-## 计算方法
+## Calculation method
 
-其中 `l_angleB` 为大腿与中线之间的间隔角度。
+Where `l_angleB` is the angle of separation between the big leg and the midline.
 
-数据中的 `left_leg_length` 是机器人通过电机角度计算出的 `外侧电机轴心` 与 `轮毂电机轴心` 的垂直距离
+In the data, `left_leg_length` is the vertical distance between `Outer motor shaft center` and `Wheel hub motor shaft center` calculated by the robot using the motor angle
 
 ```
 l_angleB = (3.14 - acos( (3.92 -((msg->left_leg_length * 10)* (msg->left_leg_length*10)))/ 3.92))/2
 ```
-
-

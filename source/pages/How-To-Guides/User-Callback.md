@@ -1,21 +1,19 @@
-#  自定义回调
+# Custom callback
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
 
-`class CallBack_Handler`:单例class，控制所有的回调进程。
+`class CallBack_Handler`: A single class that controls all callback processes.
 
-`class Callback_Manager`:管理单个回调进程。
+`class Callback_Manager`: Manage a single callback process.
 
-`class Broadcaster`:事件发出类，传递参数给监听类 。
+`class Broadcaster`: Event emitter class, passing parameters to the listener class.
 
-`class Listener`:事件监听类，接收参数并调用用户定义的回调函数。
-
-
+`class Listener`: Event listener class that receives parameters and invokes user-defined callback functions.

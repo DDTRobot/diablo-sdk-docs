@@ -1,4 +1,4 @@
-# 安装与部署
+# Installation and Deployment
 
 ```{toctree}
 :maxdepth: 2
@@ -12,18 +12,14 @@ Installation/installing-sdk-on-pi
 Installation/flash-image
 ```
 
+This page describes how to install and deploy `Diablo SDK` in your device.
 
-本页讲述如何在设备中安装部署 `Diablo SDK` 。
-
- * [安装与部署ROS2](./Installation/installing-ros2-packages)
- * [安装与部署ROS](./Installation/installing-ros-packages)
- * [通过源码编译 SDK](./Installation/build-without-ros)
- * [树莓派配置IO串口](./Installation/installing-sdk-on-pi)
- * [刷写镜像工具](./Installation/flash-image)
-
+* [Install and deploy ROS2](./Installation/installing-ros2-packages)
+* [Install and deploy ROS](./Installation/installing-ros-packages)
+* [Compile SDK by using source code](./Installation/build-without-ros)
+* [Raspberry PI serial IO port configuration](./Installation/installing-sdk-on-pi)
+* [Tool for flashing the OS image](./Installation/flash-image)
 
 ```{tip}
-我们更加推荐您使用 `ROS2` 的版本。我们也会在后续提供更多 `ROS2` 的功能包，供您使用。
+We strongly advise using the `ROS2` version. In the future, we'll offer you more `ROS2` feature packs to use.
 ```
-
-

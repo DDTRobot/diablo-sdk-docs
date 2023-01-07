@@ -1,15 +1,13 @@
-# 硬件应用层
+# Hardware application layer
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
 
-`class HAL`: 负责操控机载电脑的硬件设备，和机器人底层控制板和关节电机通信。
-
-
+`class HAL`: Responsible for controlling the hardware equipment of the on-board computer, and communicating with the bottom control board and joint motors of the robot.
