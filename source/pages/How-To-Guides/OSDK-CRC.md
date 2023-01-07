@@ -1,40 +1,33 @@
-# CRC校验
+# CRC Verification
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
+
 ------
 
-## ` bool   verify_crc16(const void* data, size_t len);` 
+## ` bool   verify_crc16(const void* data, size_t len);`
 
-- brief：  Verify CRC16 value of a received data packet.
+- brief:  Verify CRC16 value of a received data packet.
 
 - param:
 
 - return：True if CRC value is correct.
 
-- note：   NON-API FUNCTION.
+- note:   NON-API FUNCTION.
 
+## ` uint16_t  update_crc16(const void* data, size_t len);`
 
-## ` uint16_t  update_crc16(const void* data, size_t len);` 
+- brief:  Calculate CRC16 value of a data packet.
 
-- brief：  Calculate CRC16 value of a data packet.
+- param: Shall equal to sizeof(packet) - 2.
 
-- param： Shall equal to sizeof(packet) - 2.
+- return: CRC code.
 
-- return： CRC code.
-
-- note：   NON-API FUNCTION.
-
-
-
-
-
-
-
+- note:   NON-API FUNCTION.

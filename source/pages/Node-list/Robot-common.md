@@ -1,4 +1,4 @@
-# 机器人通用函数
+# General functions of robot
 
 ```{toctree}
 :maxdepth: 1
@@ -8,15 +8,10 @@
 Robot-common/Robot-sdk
 ```
 
+You can find the implementation of `SDK` communication and unpacking functions related to the robot on this page.
 
-您在这本页找到与机器人相关的 ``SDK`` 通信与解包部分的实现。
-
- * [机器人SDK实现](./Robot-common/Robot-sdk)
-
-   
+* [Robot SDK implementation](./Robot-common/Robot-sdk)
 
 ```{tip}
-您可以将自定义的一些通用的处理方法放在这个文件目录下。
+In this file directory, you can save some of your customized common handling techniques.
 ```
-
-

@@ -1,12 +1,8 @@
-# 相关项目
+# Related items
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-
-
-#### 文档持续更新中。。。
-
-
+#### Documentation will be updated on a regular basis. 

@@ -1,57 +1,50 @@
-# 机器人获取SDK控制权限
+# The robot obtains the SDK control permission
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-此节点是机器人控制的基础节点，您需要运行 `diablo_ctrl_node` 获取机器人的控制权限。您可以将您的控制指令以自定义msg : `MotionCtrl` 的格式发送到 `/diablo/MotionCmd` 实现控制效果。
+This is the basic node for robot control. You need to run `diablo_ctrl_node` to obtain the control permission of the robot. To gain control, you should send your control command to `/diablo/MotionCmd` in a custom msg `MotionCtrl`.  
 
+## Serial port modification
 
-
-## 串口修改
-
-机器人默认使用 `x3 pi` 的板载 io `/dev/ttyS3` 进行串口通信，如果您需要对其进行修改，请调整至对应的串口号，并重新编译。
+By default, the robot uses `x3 pi` on-board io `/dev/ttyS3` for serial communication. If you need to modify it, please adjust to the corresponding serial port number and recompile.
 
 ```c++
  //file：diablo_ctrl.cpp
  Hal.init("/dev/ttyS3")
 ```
 
+## Control instructions
 
+| Control ID| Value range| Remark|
+|:----------|----------|----------|
+| CMD_GO_FORWARD(0x08)| ±2.0 m/s| Negative numbers indicate backward movement|
+| CMD_GO_LEFT(0x04)| ±2.0 rad/s| Negative numbers indicate movement to the right|
+| CMD_ROLL_RIGHT(0x09)| ±0.2 rad| Negative numbers indicate movement to the left|
+| CMD_STAND_UP(0x02)| 0.0| Robot in standing mode|
+| CMD_STAND_DOWN(0x12)| 0.0| Robot in squat mode|
+| | | |
+| CMD_PITCH_MODE(0x13)| (0.0，1.0)| Position mode 0, speed mode 1|
+| CMD_PITCH(0x03)| ±0.3 pi| Position mode 0|
+| CMD_PITCH(0x03)| ±1.2 rad/s| Speed mode 1|
+| | | |
+| CMD_HEIGH_MODE(0x01)| (0.0，1.0)| Position mode 0, speed mode 1|
+| CMD_BODY_UP(0x11)| 0.0~1.0| Position mode 0|
+| CMD_BODY_UP(0x11)| ±0.5 m/s| Speed mode 1|
 
-## 控制指令
+> In the speed mode, the robot will keep moving at the speed specified in the command.
+> 
+> In the position mode, the robot will move in a fixed position represented by the value from the command.
 
-| 控制ID               | 数值范围   | 备注                 |
-| :------------------- | ---------- | -------------------- |
-| CMD_GO_FORWARD(0x08) | ±2.0 m/s   | 负数为向后运动       |
-| CMD_GO_LEFT(0x04)    | ±2.0 rad/s | 负数为向右运动       |
-| CMD_ROLL_RIGHT(0x09) | ±0.2 rad   | 负数为向左运动       |
-| CMD_STAND_UP(0x02)   | 0.0        | 机器人站立           |
-| CMD_STAND_DOWN(0x12) | 0.0        | 机器人下蹲           |
-|                      |            |                      |
-| CMD_PITCH_MODE(0x13) | (0.0，1.0) | 位置模式0，速度模式1 |
-| CMD_PITCH(0x03)      | ±0.3 pi    | 位置模式0            |
-| CMD_PITCH(0x03)      | ±1.2 rad/s | 速度模式1            |
-|                      |            |                      |
-| CMD_HEIGH_MODE(0x01) | (0.0，1.0) | 位置模式0，速度模式1 |
-| CMD_BODY_UP(0x11)    | 0.0~1.0    | 位置模式0            |
-| CMD_BODY_UP(0x11)    | ±0.5 m/s   | 速度模式1            |
-
-> 速度模式，机器人将以指令中数值的速度持续运动。
->
-> 位置模式，机器人将以指令中数值代表的固定位置运动。
-
-
-
-## 调用关系
+## Invoking relationships 
 
 ![ctrl_flow_chart](../../../_static/flow_chart/ctrl_flow_chart.png)
 
 ```{warning}
-您可以修改 `diablo_ctrl.cpp` 中被注释的部分，来修改机器人的最大速度。此设置在机器人断电之前会一直生效，您可以将此节点设置为开机启动。这可以改变遥控器的控制速度。
+By changing the areas of `diablo ctrl.cpp` that are commented out, you can change the robot's top speed. This setting will be in effect until the robot is shut off. You can configure this node to auto startup. This can alter the speed controlled by the remote control.
 
 //vehicle.telemetry->setMaxSpeed(1.0);   
-上限为：2.0，过大的速度可能会对您的机器人造成不可逆损坏！！！
+The upper limit is 2.0; exceeding this speed could harm your robot permanently.
 ```
-

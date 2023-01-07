@@ -1,54 +1,47 @@
-# 树莓派镜像刷机教程
+# Raspberry PI OS image flash tutorial 
 
 ```{toctree}
 :maxdepth: 1
 :glob:
 ```
 
-
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
 
-## Win 安装 balenaEtcher 并启动
-
-
-
+## Install balenaEtcher and start it on Windows
 
 ```bash
 roscore &
 rosrun diablo_sdk virtual_rc_example
 ```
 
-## 运行SDK演示案例
+## Run SDK demo
 
-在控制端，运行 `./script/teleop.py` 脚本。
+Run `./script/teleop.py` script from the control side.
 
-你也可以通过 ` ROS` 多机通信的方式，对机器人进行远程控制。
+You can also use ` ROS` multi-machine communication ability to control the robot remotely.
 
-### 操作说明
+### Operating instruction
 
- `w` : 控制机器人向前移动  
- `s` : 控制机器人向后移动  
- `a` : 控制机器人向左转向  
- `d` : 控制机器人向右转向  
- `z` : 切换机器人至站立形态  
- `x` : 切换机器人至匍匐形态  
- `q` : 控制机器人向左倾斜(站立模式)  
- `e` : 控制机器人向右倾斜(站立模式)  
- `c` : 切换机器人至运动模式(更快的移动速度，站立形态下允许跳跃)  
- `v` : 切换机器人至展示模式(平稳的移动速度，禁止跳跃)  
- `r` : 运动模式站立形态下控制机器人跳跃  
- `1`: 退出虚拟遥控器控制。
+`w`: control the robot to move forward  
+`s`: control the robot to move backward  
+`a`: Control the robot to turn left  
+`d`: Control the robot to turn right  
+`z`: Switch the robot to standing mode  
+`x`: Switch the robot to creeping mode  
+`q`: Control the robot to tilt to the left (standing mode)  
+`e`: Control the robot to tilt to the right (standing mode)  
+`c`: Switch the robot to motion mode (faster movement speed, allowing jumping in standing mode)  
+`v`: Switch the robot to show mode (smooth movement speed, jumping is not allowed)  
+`r`: Control the robot to jump while standing mode and in motion  
+`1`: Exit virtual remote control.
 
 ```{note}
-为安全起见，请不要在虚拟遥控器操控时切换遥控器模式，断开虚拟遥控器前请切换机器人为匍匐形态且遥控器设置机器人为匍匐形态。 物理遥控手柄的控制权限高于虚拟手柄的控制权限，调试时您可以使用物理手柄保护您的机器人。
+Please don't change the remote control mode while the virtual remote control is in use for your safety. Please switch the robot to creeping mode and configure the robot to creeping mode via the remote control before disconnecting the virtual remote control. You can utilize the physical remote control handle to protect your robot while debugging, since it has a greater level of control authority than the virtual handle.
 ```
 
 ```{warning}
-切换机器人为站立模式时，若负载过大会触发电机保护程序，将阻止机器人站起，若严重过载将触发电池保护程序，电池将断开供电。为安全起见，请勿超过最大负载切换机器人形态。
+When the robot is put in standing mode, an overload will activate the generator protection program, which will prohibit the robot from standing up and a severe overload will activate the battery protection program, which will cut off the power. When the maximum load is reached,please do not switch the robot mode for safety.
 ```
-
-
-

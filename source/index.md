@@ -1,44 +1,39 @@
-> # 欢迎使用 DIABLO-Development-Doc 开发文档!
->
+> # Welcome to DIABLO-Development Documentation!
 
 ```{toctree}
 :maxdepth: 1
-:caption: DIABLO-Development-Doc 开发文档
+:caption: DIABLO-Development-Doc
 pages/Installation
 pages/Node-List
 ```
 
-
-## 简介
+## Introduction
 
 ![diablo_robot_render](./_static/diablo_robot_render.jpg)
+In order to provide you with more choices, we offer three development methods. You can use `ROS`, `ROS2`, or directly compile the source code of the `SDK` for the secondary development of robot. We recommend you use `ROS2` for development, which delivers better performance and more stable control methods.
 
-为了提供给您更加多样的选择，我们提供了三种开发方式。您可以直接使用 Ros 、Ros2 、或者是直接编译 SDK 的源码进行机器人的二次开发工作。我们更加推荐您使用 `Ros2` 的版本进行开发，它具有更好的性能，更加稳定的控制方法。
+In the future, we will also provide more `ROS2` function packs to help you quickly obtain more functions, hoping that it can provide some help for you to customize your own robot.
 
-我们也将在后续不断的提供更多的 Ros2 功能包，帮助您快速获得各种功能，希望这能对您自定义自己的专属机器人提供一些帮助。
+* Excellent compatibility: The software design is not heavily dependent on developing environment, and you can use it on most `Linux` devices that support serial ports.
 
-* 兼容性优秀：软件设计上对环境依赖少，您几乎可以在大部分的支持串口的 `Linux` 设备中进行使用。
+* Simple control interface: We provide the robot visualization capabilities of `rviz2` and `gazebo` in the function package of `ROS2`, which can be controlled by a customizable remote control plug-in.
 
-* 控制界面简单：我们在 `Ros2` 的功能包中提供了 `rviz2` 和 `gazebo` 的机器人可视化功能，并且可以使用自定义遥控器插件进行控制。
+* Better safety: Our system is equipped with a variety of safety assurance logics, which ensures safety to its best ability under various special conditions in the development process.
 
-* 安全性好：系统配套了多种安全保障逻辑，可以在用户开发过程中各种特殊工况下，尽可能保证安全。
+For more introduction, please visit our official website: [Direct Drive Technology](https://directdrive.com)。
 
-您可以在我们的官网获得更多的产品信息 [本末科技](https://directdrive.com)。
+### How to get started
 
-### 如何开始
+There are three methods for compiling our `SDK`。
 
-您可以通过一下的三种方法对我们的 `SDK` 进行编译。
+- [Compile the function package in ROS2 (Recommended)](./pages/Installation/installing-ros2-packages)
+- [Compile the function package in ROS](./pages/Installation/installing-ros-packages)
+- [Compile with C++ ](./pages/Installation/build-without-ros)
 
-- [在 Ros2 中编译功能包 (Recommended)](./pages/Installation/installing-ros2-packages)
-- [在 Ros 中编译功能包](./pages/Installation/installing-ros-packages)
-- [使用 C++ 源码进行编译](./pages/Installation/build-without-ros)
+### SDK quick start
 
-### SDK开发案例
-
-我们为您提供了一个键盘事件捕获的 `Python` 控制节点。您可以在启动 `diablo_ctrl_node` 获得 `SDK` 的控制权限之后，运行 `teleop_node` 捕获键盘中的事件，您可以参考其指令的使用方法。
-
+We provide you with a `Python` control node for keyboard event capture. After starting `diablo_ctrl_node` and gaining control of `SDK`, you can run `teleop_node` to capture events of the keyboard. You can refer to the usage of its commands.
 
 ```{note}
-  我们将致力于为您提供更多优质的机器人控制服务，依托于我们的机器人平台适配更多的智能算法，希望这能对您的研发工作有所帮助。
+  We will be committed to providing you with more high-quality robot control services, relying on our robot platform to adapt more intelligent algorithms. We hope our effort will facilitate your development.
 ```
-

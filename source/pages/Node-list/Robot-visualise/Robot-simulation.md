@@ -1,35 +1,32 @@
-# 机器人仿真组件
+# Simulation components of robot
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-在这个模块中，我们提供了 `rviz` 的机器人数据可视化历程，以及自定义的一个遥控器插件，您可以通过启动我们提供的 `launch` 文件来启动这些功能。您可以利用 `Ros2` 的多机通信机制，在 `机器人` 端启动 `diablo_ctrl_node` ，获得机器人的控制权。在局域网内的 `PC` 端启动 `ctrl.launch.py` 进行远程遥控，以及监测数据的反馈情况。
+We provide the robot data visualization process of `rviz`, and a custom remote control plug-in in this module. Launching the `launch` file we provide can start these functions. You can use the multi-machine communication mechanism of `Ros2` to start `diablo_ctrl_node` on `Robot` side and take control of the robot. Start `ctrl.launch.py` on `PC` terminal in the local area network to control the robot remotely and monitor the data feedback.
 
+## Quick start
 
-
-## 快速开始
-
-确保您已经成功编译了 `diablo_visualise` 中的内容。
+Make sure you have successfully compiled the content in `diablo_visualise`.
 
 ```bash
 ros2 launch diablo_simulation ctrl.launch.py
 ```
 
-> 注：启动后您需要手动关闭 `joint state publisher` 的 UI 。否则会影响您的数值显示。
+> Note: You need to close `joint state publisher` UI manually after startup. Otherwise your numerical display will be affected.
 
 ![diablo_rviz2_launch](../../../_static/diablo_rviz_launch.png)
 
-## 仿真设计
+## Simulation design
 
-我们在例程中同样支持了 `gazebo` 的启动。如果您有较强的开发能力，您可以自行构建机器人的平衡算法，进行后续的运动仿真工作。如果您设计出了出色的控制程序，也欢迎您联系我们，我们会根据您的完成度给予您一定的奖励。
+We also support `gazebo` startup in the routine procedures. If your development skills are strong, you can create your own balancing algorithm for the robot and carry out the follow-up motion simulation work. If you have designed an excellent control program, you are welcome to contact us. We will reward you based on the completeness of your work.
 
 ```
 ros2 launch diablo_simulation gazebo.launch.py
 ```
 
-请开始你的表演~
+Please start your show~
 
 ![diablo_gazebo_launch](../../../_static/diablo_gazebo_launch.png)
-

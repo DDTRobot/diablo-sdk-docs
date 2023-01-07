@@ -1,4 +1,4 @@
-# 开发指南
+# Developer Guide
 
 ```{toctree}
 :maxdepth: 1
@@ -15,5 +15,3 @@ How-To-Guides/OSDK-CRC
 How-To-Guides/OSDK-Movement
 
 ```
-
-

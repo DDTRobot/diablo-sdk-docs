@@ -1,5 +1,5 @@
 ***************************************
-其他类型API
+Other types of API
 ***************************************
 
 .. toctree::
@@ -8,7 +8,7 @@
    :glob:
 
 
-.. contents:: 目录
+.. contents:: Contents
 
 
 
@@ -17,13 +17,13 @@ C++ API
 
 .. cpp:enum-class::Calibration
 
-    将使机器人自动标定调整参数。开始标定前，请确保电池电量充足且机器人处于站立模式，自动标定时请留出足够空间，标定过程中请勿触碰机身，以防失控伤人以及参数错误。标定完成后需重启机器人。
-    出现以下状况，请调用此函数重新标定机器人。
+    It will cause the robot automatically calibrate the adjustment parameters. Before starting the calibration, please make sure there is sufficient battery power, and the robot is in standing mode. Please provide enough space for automatic calibration. Please do not touch the robot during the calibration process to prevent loss of control, injury and parameter errors. Restart the robot after the calibration is complete.
+    In the following situations, please invoke this function to recalibrate the robot.
 
 .. error::
-    * 站立姿态无法保持平衡
-    * 站立姿态未推动遥控器，机器人自行前后移动(请先排除遥感漂移)。
-        若自动标定无法解决，且排除电机过热/过载因素，请联系售后。
+    * Unable to maintain balance while in standing mode
+    * While in the standing mode, the robot moves forward and backward by itself without user pushing the remote control (please rule out the possibility of remote sensing drift first).
+        If the automatic calibration cannot solve the problem, and the motor overheating/overload is ruled out, please contact the after-sales service.
 
 .. cpp:function:: const MyType Foo(const MyType bar)
 

@@ -1,11 +1,11 @@
-#  运动控制
+# Movement control
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```

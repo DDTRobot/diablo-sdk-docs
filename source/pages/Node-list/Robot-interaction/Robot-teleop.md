@@ -1,14 +1,12 @@
-# 机器人虚拟遥控器
+# Virtual remote control of robot
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-此节点能够快速的帮助您测试 `SDK` 的功能是否正常。您可以在终端中运行此节点，启动 `Python` 节点后将会捕获按键的输入信息。您可以手动修改 `teleop.py` 中的数值，以改变虚拟遥控器的控制效果。
+This node can quickly help you test whether `SDK` function is working properly. You can run this node in a terminal, and the keyboard input will be captured when `Python` node is started. You can manually modify the value in `teleop.py` to change the control effect of the virtual remote control.
 
-## 调用关系
+## Invoking relationships
 
 ![teleop_flow_chart](../../../_static/flow_chart/teleop_flow_chart.png)
-
-

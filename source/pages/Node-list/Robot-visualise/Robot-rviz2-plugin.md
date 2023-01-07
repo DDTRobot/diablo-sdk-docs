@@ -1,37 +1,31 @@
-# 机器人Rviz2自定义插件
+# Rviz2 custom plug-in of robot
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-在此功能包中，我们利用 `Qt` 为 `Rviz2` 进行了遥控器可视化插件的制作。您也可以参照此例程对其控制逻辑进行修改，或者自定义一些数据的可视化插件，这可能需要您对 `Qt` 有一些了解。
+In this function package, we created a remote control visualization plug-in for `Rviz2` by utilizing `Qt`. You can also use this routine as a reference to modify its control logic, or customize some data visualization plug-ins, which may require you to have some knowledge of `Qt`.
 
-## 插件预览
+## Plug-in preview
 
 ![rviz_plugin](../../../_static/rviz_plugin.png)
 
-## 快速开始
+## Quick start
 
-请确保您已经成功编译了 `diablo_rviz2_plugin` 节点。
+Make sure you have successfully compiled the nodes in `diablo_rviz2_plugin`.
 
 > - Panels -> Add new panel -> mission panel
 
-使用前您需要在 `机器人端` 启动  `diablo_ctrl_node` 获取机器人的控制权限。并点击 `Detect` 搜索 `/diablo/MotionCmd` 以建立控制连接。
+Before use, you need to start `diablo_ctrl_node` from `Robot end` to obtain the control permission of the robot. Then search for `/diablo/MotionCmd` by clicking `Detect` to establish a control connection.
 
-您可以通过拖动右侧 `滑动条` 控制机器人站立高度。调整窗口数值，以改变机器人控制速度。您可以通过鼠标点击 Ui 按钮实现控制。也可以将鼠标悬停至该组件上，使用键盘进行控制。
+You can control the robot standing height by dragging the right `Slider`. Adjust the values in the window to change the robot's control speed. You can control it by clicking on the UI button using a mouse. You can also hover the cursor over this component and use the keyboard to control it.
 
-|   q(左侧倾斜)   |        w(前进)        |   e(右侧倾斜)   |
-| :-------------: | :-------------------: | :-------------: |
-|     a(左转)     |        s(后退)        |     d(右转)     |
-| z(固定速度仰头) | x(停止仰头或停止倾斜) | c(固定速度低头) |
+| q (tilt left)| w (go forward)| e (tilt left)|
+|:----------:|:----------:|:----------:|
+| a (turn left)| s (go backward)| d (turn right)|
+| z (head up at a fixed speed)| x (stop head up or tilting)| c (head down at a fixed speed)|
 
+## Thanks
 
-
-
-
-
-## 致谢
-
-- 	[Cyberdog_rviz2_plugin](https://github.com/linzhibo/Cyberdog_rviz2_plugin)
-
+- [Cyberdog_rviz2_plugin](https://github.com/linzhibo/Cyberdog_rviz2_plugin)

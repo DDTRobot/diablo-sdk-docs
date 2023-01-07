@@ -1,30 +1,26 @@
-# 安装与部署ROS
+# Install and deploy ROS
 
 ```{toctree}
 :maxdepth: 1
 :glob:
 ```
 
-
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
 
+## Install ROS-noetic on Raspberry PI
 
+- [Install Ubuntu mate](https://ubuntu-mate.org/download/arm64/jammy/)
+- [Raspberry PI serial IO port configuration](./installing-sdk-on-pi)
+- [Install ROS-noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
 
-## 树莓派安装 Ros-noetic
+The installation of ROS may be affected by the network and result in problems.
 
-- [安装 Ubuntu mate](https://ubuntu-mate.org/download/arm64/jammy/)
-- [树莓派配置硬串口](./installing-sdk-on-pi)
-- [安装 Ros-noetic](http://wiki.ros.org/noetic/Installation/Ubuntu)
+## Compile ROS Package
 
-Ros 的安装可能受到网络的影响，会导致安装出现问题。
-
-
-## 编译 Ros Package
-
-1. 创建ros工程文件夹
+1. Create ros project folder
 
 ```bash
 #make sure you have build all dependence.
@@ -39,10 +35,9 @@ cd ~/catkin_ws
 catkin_make
 ```
 
-向 `.bashrc` 添加以下指令，保证您可以通过局域网访问`ROS机器人` 的节点。
+Add the following commands to `.bashrc` to ensure that you can access `ROS Robots` node over the LAN.
 
 ```bash
-export ROS_IP=${机载树莓派IP}
+export ROS_IP=${On-board Raspberry PI IP}
 export ROS_MASTER_URI=http://${ROS_IP}:11311
 ```
-

@@ -1,14 +1,15 @@
-# 通信协议
+# Communication protocols
 
 ```{toctree}
 :maxdepth: 2
 :glob:
 ```
 
-```{contents} 目录
+```{contents} Contents
 :depth: 2
 :local:
 ```
+
 ------
 
 ## ` struct  OSDK_Uart_Header_t`
@@ -26,7 +27,6 @@ uint8_t   RES1[3];
 uint16_t  SEQ;          //frame sequence num
 uint16_t  CRC16;        //CRC16 frame header checksum
 ```
-
 
 ## ` struct  OSDK_Uart_Packet_t`
 
@@ -114,7 +114,6 @@ uint16_t timeout_ms  : 14;      //automatic release control authority after time
 
 ```
 
-
 ## ` struct  OSDK_Push_Data_Freq_Select_t`
 
 ```c++
@@ -129,8 +128,8 @@ uint16_t timeout_ms  : 14;      //automatic release control authority after time
 
 ```
 
-
 ## ` struct  OSDK_Push_Data_Flag_t`
+
 ```c++
     uint8_t  status      : 1; 
     uint8_t  quaternion  : 1; 
@@ -152,7 +151,6 @@ uint16_t timeout_ms  : 14;      //automatic release control authority after time
     OSDK_CTRL_MODE_VIRTUAL_RC  = 2
 
 ```
-
 
 ## ` enum    OSDK_Robot_State_t`
 
